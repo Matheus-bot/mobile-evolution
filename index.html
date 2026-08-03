@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A Evolução do Desenvolvimento Mobile</title>
+  <meta name="description" content="Da programação nativa ao desenvolvimento multiplataforma." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS (scroll reveal) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <!-- Prism.js (syntax highlighting) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js" defer></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Barra de progresso de scroll -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Navegação por dots (gerada dinamicamente pelo main.js) -->
+  <nav class="nav-dots" id="navDots" aria-label="Navegação entre seções"></nav>
+
+  <main>
+
+    <!-- ============================================= -->
+    <!-- 01. HERO                                        -->
+    <!-- ============================================= -->
+    <section class="section hero" id="hero" data-label="Início">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="hero__blob hero__blob--1"></span>
+        <span class="hero__blob hero__blob--2"></span>
+      </div>
+
+      <p class="hero__eyebrow" data-reveal>Desenvolvimento de Software Multiplataforma</p>
+
+      <h1 class="hero__title" data-reveal-title>
+        <span class="hero__title-line">A Evolução do</span>
+        <span class="hero__title-line hero__title-line--gradient">Desenvolvimento Mobile</span>
+      </h1>
+
+      <p class="hero__subtitle" data-reveal>Da programação nativa ao desenvolvimento multiplataforma</p>
+
+      <button class="btn btn--primary hero__cta" id="heroCta" data-reveal>
+        <span>Iniciar Jornada</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 02. LINHA DO TEMPO                              -->
+    <!-- ============================================= -->
+    <section class="section timeline" id="timeline" data-label="Linha do Tempo">
+      <p class="section-eyebrow" data-aos="fade-up">Uma jornada de mais de 15 anos</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="100">A Linha do Tempo</h2>
+
+      <div class="timeline__track">
+        <div class="timeline__progress" id="timelineProgress"></div>
+
+        <ul class="timeline__list">
+          <li class="timeline__item is-right" data-aos="fade-up">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2008</span>
+              <h3>Android nasce</h3>
+              <p>O SDK é lançado e o Android chega ao mercado.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-left" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2008–2016</span>
+              <h3>Java domina o Android</h3>
+              <p>Linguagem oficial e padrão de mercado por quase uma década.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-right" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2013</span>
+              <h3>Android Studio</h3>
+              <p>A IDE oficial do Google chega para substituir o Eclipse.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-left" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2015</span>
+              <h3>React Native</h3>
+              <p>O Facebook populariza o desenvolvimento multiplataforma com JavaScript.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-right" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2017</span>
+              <h3>Kotlin</h3>
+              <p>Google adota Kotlin como linguagem oficial para Android.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-left" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">2017</span>
+              <h3>Flutter</h3>
+              <p>Google entra na disputa com um framework próprio e performático.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item is-right timeline__item--now" data-aos="fade-up" data-aos-delay="80">
+            <span class="timeline__dot"></span>
+            <div class="timeline__content">
+              <span class="timeline__year">Hoje</span>
+              <h3>IA no desenvolvimento</h3>
+              <p>Copilot, ChatGPT e Gemini aceleram o modo como criamos software.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 03. ANDROID STUDIO                              -->
+    <!-- ============================================= -->
+    <section class="section android-studio" id="android-studio" data-label="Android Studio">
+      <div class="android-studio__text" data-aos="fade-right">
+        <p class="section-eyebrow">Ambiente Oficial de Desenvolvimento</p>
+        <h2 class="section-heading section-heading--left">Android Studio</h2>
+        <p class="android-studio__lead">
+          A IDE oficial do Google para Android, construída sobre o IntelliJ IDEA.
+          Reúne tudo o que é preciso para escrever, testar e depurar um app —
+          em um único lugar.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="0" data-tilt>
+            <i data-lucide="smartphone"></i>
+            <h3>Emulador</h3>
+            <p>Simula dispositivos reais sem precisar de hardware físico.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="80" data-tilt>
+            <i data-lucide="package"></i>
+            <h3>Gradle</h3>
+            <p>Compila, empacota e gerencia as dependências do projeto.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="160" data-tilt>
+            <i data-lucide="layers"></i>
+            <h3>SDK</h3>
+            <p>Ferramentas e APIs para acessar os recursos do Android.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="240" data-tilt>
+            <i data-lucide="bug"></i>
+            <h3>Debug</h3>
+            <p>Breakpoints e inspeção de estado em tempo real.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ide-mock" data-aos="fade-left" data-aos-delay="150" data-tilt>
+        <div class="ide-mock__titlebar">
+          <span class="ide-mock__dot ide-mock__dot--a"></span>
+          <span class="ide-mock__dot ide-mock__dot--b"></span>
+          <span class="ide-mock__dot ide-mock__dot--c"></span>
+          <span class="ide-mock__title">MainActivity.kt — app</span>
+        </div>
+        <div class="ide-mock__body">
+          <div class="ide-mock__sidebar">
+            <span class="ide-mock__file is-active"></span>
+            <span class="ide-mock__file"></span>
+            <span class="ide-mock__file"></span>
+            <span class="ide-mock__file" style="width:60%"></span>
+            <span class="ide-mock__file"></span>
+          </div>
+          <div class="ide-mock__code">
+            <div class="ide-mock__line"><span class="tok tok--kw" style="width:18%"></span><span class="tok tok--fn" style="width:26%"></span></div>
+            <div class="ide-mock__line"><span class="tok tok--kw" style="width:14%"></span><span class="tok" style="width:40%"></span></div>
+            <div class="ide-mock__line ide-mock__line--indent"><span class="tok tok--str" style="width:52%"></span></div>
+            <div class="ide-mock__line ide-mock__line--indent"><span class="tok tok--kw" style="width:20%"></span><span class="tok" style="width:22%"></span></div>
+            <div class="ide-mock__line"><span class="tok" style="width:10%"></span></div>
+            <div class="ide-mock__line"><span class="tok tok--comment" style="width:60%"></span></div>
+            <div class="ide-mock__line"><span class="tok tok--kw" style="width:16%"></span><span class="tok tok--fn" style="width:30%"></span></div>
+            <div class="ide-mock__line ide-mock__line--indent"><span class="tok" style="width:44%"></span></div>
+          </div>
+        </div>
+        <div class="ide-mock__statusbar">
+          <span class="ide-mock__status-dot"></span>
+          <span>Build successful</span>
+          <span class="ide-mock__status-sep">·</span>
+          <span>Logcat</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 04. DESENVOLVIMENTO NATIVO                      -->
+    <!-- ============================================= -->
+    <section class="section native-dev" id="native-dev" data-label="Nativo">
+      <p class="section-eyebrow" data-aos="fade-up">Cada plataforma, sua linguagem</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Desenvolvimento Nativo</h2>
+
+      <div class="lang-badges" data-aos="fade-up" data-aos-delay="140">
+        <span class="lang-badge"><span class="lang-badge__dot" style="background:#f8981d"></span>Java</span>
+        <span class="lang-badge"><span class="lang-badge__dot" style="background:#7f52ff"></span>Kotlin</span>
+        <span class="lang-badge"><span class="lang-badge__dot" style="background:#f05138"></span>Swift</span>
+      </div>
+
+      <p class="native-dev__lead" data-aos="fade-up" data-aos-delay="180">
+        Desenvolvimento nativo é escrever o app diretamente na linguagem e no SDK
+        de cada plataforma — Java/Kotlin para Android, Swift para iOS.
+      </p>
+
+      <div class="native-dev__grid">
+        <div class="code-window" data-aos="fade-right" data-aos-delay="100" data-tilt>
+          <div class="code-window__titlebar">
+            <span class="win-dot win-dot--a"></span>
+            <span class="win-dot win-dot--b"></span>
+            <span class="win-dot win-dot--c"></span>
+            <span class="code-window__title">MainActivity.java</span>
+          </div>
+          <pre class="code-window__pre"><code class="language-java">public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(v ->
+            Toast.makeText(this, "Nativo!", Toast.LENGTH_SHORT).show()
+        );
+    }
+}</code></pre>
+        </div>
+
+        <div class="pros-cons">
+          <div class="pros-cons__col pros-cons__col--pros" data-aos="fade-left" data-aos-delay="140">
+            <h3><i data-lucide="check-circle"></i> Vantagens</h3>
+            <ul>
+              <li>Melhor performance e fluidez</li>
+              <li>Acesso total ao hardware e às APIs do sistema</li>
+              <li>UI/UX alinhada aos padrões da plataforma</li>
+              <li>Suporte oficial e atualizações mais rápidas</li>
+            </ul>
+          </div>
+          <div class="pros-cons__col pros-cons__col--cons" data-aos="fade-left" data-aos-delay="220">
+            <h3><i data-lucide="x-circle"></i> Desvantagens</h3>
+            <ul>
+              <li>Código separado para cada plataforma</li>
+              <li>Maior tempo e custo de desenvolvimento</li>
+              <li>Curva de aprendizado por linguagem/SDK</li>
+              <li>Manutenção duplicada</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 05. REACT NATIVE                                -->
+    <!-- ============================================= -->
+    <section class="section react-native" id="react-native" data-label="React Native">
+      <p class="section-eyebrow" data-aos="fade-up">Um código, duas plataformas</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">React Native</h2>
+      <p class="native-dev__lead" data-aos="fade-up" data-aos-delay="140">
+        Framework criado pelo Facebook para escrever apps em JavaScript/React —
+        os componentes são traduzidos em elementos nativos reais, sem WebView.
+      </p>
+
+      <div class="rn__grid">
+        <div class="rn__side" data-aos="fade-right" data-aos-delay="120">
+          <div class="rn-architecture" data-tilt>
+            <div class="rn-arch__node">
+              <i data-lucide="code-2"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="rn-arch__connector"><span class="rn-arch__pulse"></span></div>
+            <div class="rn-arch__node rn-arch__node--bridge">
+              <i data-lucide="git-compare-arrows"></i>
+              <span>Bridge</span>
+            </div>
+            <div class="rn-arch__connector"><span class="rn-arch__pulse" style="animation-delay: 0.9s"></span></div>
+            <div class="rn-arch__node">
+              <i data-lucide="smartphone"></i>
+              <span>Nativo</span>
+            </div>
+          </div>
+
+          <div class="feature-row">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="0">
+              <i data-lucide="layout-grid"></i>
+              <h3>Componentes</h3>
+              <p>Blocos de UI reutilizáveis e declarativos.</p>
+            </div>
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="80">
+              <i data-lucide="refresh-cw"></i>
+              <h3>Hot Reload</h3>
+              <p>Vê o resultado instantaneamente a cada alteração.</p>
+            </div>
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="160">
+              <i data-lucide="share-2"></i>
+              <h3>Código Compartilhado</h3>
+              <p>Uma base para Android e iOS ao mesmo tempo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-window" data-aos="fade-left" data-aos-delay="160" data-tilt>
+          <div class="code-window__titlebar">
+            <span class="win-dot win-dot--a"></span>
+            <span class="win-dot win-dot--b"></span>
+            <span class="win-dot win-dot--c"></span>
+            <span class="code-window__title">App.js</span>
+          </div>
+          <pre class="code-window__pre"><code class="language-jsx">export default function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;View style={styles.container}&gt;
+      &lt;Text style={styles.title}&gt;
+        Você clicou {count} vezes
+      &lt;/Text&gt;
+      &lt;Button
+        title="Clicar"
+        onPress={() => setCount(count + 1)}
+      /&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 06. COMPARAÇÃO                                  -->
+    <!-- ============================================= -->
+    <section class="section comparison" id="comparison" data-label="Comparação">
+      <p class="section-eyebrow" data-aos="fade-up">Frente a frente</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Nativo vs React Native</h2>
+
+      <div class="comparator" data-aos="fade-up" data-aos-delay="120">
+        <div class="comparator__header">
+          <span class="comparator__side-label comparator__side-label--left">
+            <span class="comparator__side-dot comparator__side-dot--android"></span>Android Nativo
+          </span>
+          <span class="comparator__side-label comparator__side-label--right">
+            React Native<span class="comparator__side-dot comparator__side-dot--rn"></span>
+          </span>
+        </div>
+
+        <ul class="comparator__list">
+          <li class="comparator__row" data-android="100" data-rn="80">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="zap"></i><span>Performance</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="40" data-rn="100">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="clock"></i><span>Tempo de Desenvolvimento</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="20" data-rn="100">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="repeat"></i><span>Reutilização de Código</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="60" data-rn="80">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="wrench"></i><span>Manutenção</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="100" data-rn="60">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="cpu"></i><span>Acesso ao Hardware</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="40" data-rn="80">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="trending-up"></i><span>Curva de Aprendizado</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+          <li class="comparator__row" data-android="80" data-rn="80">
+            <div class="comparator__bar comparator__bar--left"><span class="comparator__fill comparator__fill--left"></span></div>
+            <div class="comparator__criterion"><i data-lucide="briefcase"></i><span>Mercado</span></div>
+            <div class="comparator__bar comparator__bar--right"><span class="comparator__fill comparator__fill--right"></span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 07. DEBATE "QUEM VENCE?"                        -->
+    <!-- ============================================= -->
+    <section class="section debate" id="debate" data-label="Debate">
+      <p class="section-eyebrow" data-aos="fade-up">Hora do duelo</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Quem vence?</h2>
+
+      <div class="battle" data-aos="fade-up" data-aos-delay="120">
+        <div class="battle__card battle__card--android" id="battleAndroid">
+          <div class="battle__icon"><i data-lucide="bot"></i></div>
+          <h3>Android Nativo</h3>
+        </div>
+
+        <div class="battle__center">
+          <p class="battle__question" id="battleQuestion">Maior desempenho?</p>
+          <div class="battle__dots" id="battleDots"></div>
+        </div>
+
+        <div class="battle__card battle__card--rn" id="battleRN">
+          <div class="battle__icon"><i data-lucide="atom"></i></div>
+          <h3>React Native</h3>
+        </div>
+      </div>
+
+      <div class="battle__result" id="battleResult">
+        <span class="battle__result-label">Resultado</span>
+        <span class="battle__result-value">Empate</span>
+        <span class="battle__result-msg">A melhor tecnologia depende do projeto.</span>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 08. SISTEMAS OPERACIONAIS                       -->
+    <!-- ============================================= -->
+    <section class="section os-section" id="os" data-label="Sistemas Operacionais">
+      <p class="section-eyebrow" data-aos="fade-up">Além do óbvio</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Sistemas Operacionais Mobile</h2>
+
+      <div class="os-grid">
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="0" data-tilt>
+          <div class="os-card__badge" style="background: rgba(61,220,132,0.12)"><i data-lucide="bot" style="color:#3ddc84"></i></div>
+          <h3>Android</h3>
+          <p class="os-card__desc">Sistema aberto do Google, baseado em Linux.</p>
+          <span class="os-card__status os-card__status--active">Líder de mercado</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="80" data-tilt>
+          <div class="os-card__badge" style="background: rgba(229,229,231,0.12)"><i data-lucide="apple" style="color:#e5e5e7"></i></div>
+          <h3>iOS</h3>
+          <p class="os-card__desc">Sistema fechado e otimizado da Apple.</p>
+          <span class="os-card__status os-card__status--active">Forte em receita</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="160" data-tilt>
+          <div class="os-card__badge" style="background: rgba(255,107,107,0.12)"><i data-lucide="boxes" style="color:#ff6b6b"></i></div>
+          <h3>HarmonyOS</h3>
+          <p class="os-card__desc">SO da Huawei, criado após sanções dos EUA.</p>
+          <span class="os-card__status os-card__status--niche">Em expansão na China</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="240" data-tilt>
+          <div class="os-card__badge" style="background: rgba(0,180,216,0.12)"><i data-lucide="phone" style="color:#00b4d8"></i></div>
+          <h3>KaiOS</h3>
+          <p class="os-card__desc">SO leve para celulares com teclado físico.</p>
+          <span class="os-card__status os-card__status--niche">Nicho emergente</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="0" data-tilt>
+          <div class="os-card__badge" style="background: rgba(255,153,0,0.12)"><i data-lucide="flame" style="color:#ff9900"></i></div>
+          <h3>Fire OS</h3>
+          <p class="os-card__desc">Fork do Android usado nos dispositivos Amazon.</p>
+          <span class="os-card__status os-card__status--niche">Restrito ao ecossistema</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="80" data-tilt>
+          <div class="os-card__badge" style="background: rgba(233,84,32,0.12)"><i data-lucide="terminal" style="color:#e95420"></i></div>
+          <h3>Ubuntu Touch</h3>
+          <p class="os-card__desc">Versão mobile do Ubuntu, mantida pela comunidade.</p>
+          <span class="os-card__status os-card__status--niche">Projeto open-source</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="160" data-tilt>
+          <div class="os-card__badge" style="background: rgba(47,159,224,0.12)"><i data-lucide="tv" style="color:#2f9fe0"></i></div>
+          <h3>Tizen</h3>
+          <p class="os-card__desc">SO da Samsung para TVs, wearables e IoT.</p>
+          <span class="os-card__status os-card__status--active">Ativo em TV/IoT</span>
+        </div>
+
+        <div class="os-card" data-aos="zoom-in" data-aos-delay="240" data-tilt>
+          <div class="os-card__badge" style="background: rgba(138,138,148,0.12)"><i data-lucide="compass" style="color:#8a8a94"></i></div>
+          <h3>Sailfish OS</h3>
+          <p class="os-card__desc">SO finlandês com interface baseada em gestos.</p>
+          <span class="os-card__status os-card__status--inactive">Praticamente descontinuado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 09. MERCADO                                     -->
+    <!-- ============================================= -->
+    <section class="section market" id="market" data-label="Mercado">
+      <p class="section-eyebrow" data-aos="fade-up">Números do mercado</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Mercado Mobile</h2>
+
+      <div class="market__grid">
+        <div class="chart-card" data-aos="fade-up" data-aos-delay="120">
+          <h3>Participação de Mercado</h3>
+          <div class="chart-card__canvas-wrap">
+            <canvas id="marketShareChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Frameworks Populares</h3>
+          <div class="chart-card__canvas-wrap">
+            <canvas id="frameworksChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 10. QUAL TECNOLOGIA ESCOLHER?                   -->
+    <!-- ============================================= -->
+    <section class="section chooser" id="chooser" data-label="Qual Escolher?">
+      <p class="section-eyebrow" data-aos="fade-up">Decisão na prática</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">Qual tecnologia escolher?</h2>
+      <p class="native-dev__lead" data-aos="fade-up" data-aos-delay="140">Toque em cada cenário para revelar a resposta.</p>
+
+      <div class="chooser__grid">
+        <button class="flip-card" type="button" data-aos="zoom-in" data-aos-delay="0">
+          <div class="flip-card__inner">
+            <div class="flip-card__face flip-card__face--front">
+              <i data-lucide="landmark"></i>
+              <p>Aplicativo bancário</p>
+              <span class="flip-card__hint">Toque para revelar</span>
+            </div>
+            <div class="flip-card__face flip-card__face--back flip-card__face--native">
+              <span class="flip-card__answer">Nativo</span>
+              <p>Segurança máxima e acesso total ao hardware.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" type="button" data-aos="zoom-in" data-aos-delay="80">
+          <div class="flip-card__inner">
+            <div class="flip-card__face flip-card__face--front">
+              <i data-lucide="rocket"></i>
+              <p>Startup validando uma ideia</p>
+              <span class="flip-card__hint">Toque para revelar</span>
+            </div>
+            <div class="flip-card__face flip-card__face--back flip-card__face--rn">
+              <span class="flip-card__answer">React Native</span>
+              <p>Velocidade para lançar e iterar rápido.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" type="button" data-aos="zoom-in" data-aos-delay="160">
+          <div class="flip-card__inner">
+            <div class="flip-card__face flip-card__face--front">
+              <i data-lucide="copy"></i>
+              <p>App para Android e iOS ao mesmo tempo</p>
+              <span class="flip-card__hint">Toque para revelar</span>
+            </div>
+            <div class="flip-card__face flip-card__face--back flip-card__face--rn">
+              <span class="flip-card__answer">React Native</span>
+              <p>Uma base de código para as duas plataformas.</p>
+            </div>
+          </div>
+        </button>
+
+        <button class="flip-card" type="button" data-aos="zoom-in" data-aos-delay="240">
+          <div class="flip-card__inner">
+            <div class="flip-card__face flip-card__face--front">
+              <i data-lucide="gauge"></i>
+              <p>Máximo desempenho (jogos, AR)</p>
+              <span class="flip-card__hint">Toque para revelar</span>
+            </div>
+            <div class="flip-card__face flip-card__face--back flip-card__face--native">
+              <span class="flip-card__answer">Nativo</span>
+              <p>Acesso direto ao hardware e máxima performance.</p>
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 11. FUTURO (IA)                                 -->
+    <!-- ============================================= -->
+    <section class="section future" id="future" data-label="Futuro">
+      <p class="section-eyebrow" data-aos="fade-up">O próximo capítulo</p>
+      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">O Futuro é Assistido por IA</h2>
+      <p class="native-dev__lead" data-aos="fade-up" data-aos-delay="140">
+        Da geração de código à revisão automática — a IA já faz parte do fluxo de qualquer desenvolvedor.
+      </p>
+
+      <div class="future__grid">
+        <div class="future-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="future-card__icon" style="--icon-color:#f5f5f7"><i data-lucide="github"></i></div>
+          <h3>GitHub Copilot</h3>
+          <p>Sugestões de código em tempo real, direto no editor.</p>
+        </div>
+
+        <div class="future-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="future-card__icon" style="--icon-color:#10a37f"><i data-lucide="sparkles"></i></div>
+          <h3>ChatGPT</h3>
+          <p>Explica, refatora e tira dúvidas em segundos.</p>
+        </div>
+
+        <div class="future-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="future-card__icon" style="--icon-color:#a855f7"><i data-lucide="gem"></i></div>
+          <h3>Gemini</h3>
+          <p>IA multimodal do Google, integrada ao ecossistema Android.</p>
+        </div>
+
+        <div class="future-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="future-card__icon" style="--icon-color:#5b8cff"><i data-lucide="mouse-pointer-click"></i></div>
+          <h3>Cursor</h3>
+          <p>Editor construído do zero para programar com IA.</p>
+        </div>
+      </div>
+
+      <p class="future__closing" data-aos="fade-up" data-aos-delay="120">
+        A IA não substitui o desenvolvedor — acelera quem já sabe pensar.
+      </p>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- 12. CONCLUSÃO                                   -->
+    <!-- ============================================= -->
+    <section class="section conclusion" id="conclusion" data-label="Conclusão">
+      <div class="conclusion__stack">
+        <p class="conclusion__line" data-aos="fade-up" data-aos-delay="0">O futuro não é escolher um lado.</p>
+        <p class="conclusion__line" data-aos="fade-up" data-aos-delay="350">O futuro é saber escolher a tecnologia certa.</p>
+        <p class="conclusion__line conclusion__line--final" data-aos="fade-up" data-aos-delay="700">Todo bom desenvolvedor conhece ambas.</p>
+      </div>
+
+      <footer class="conclusion__footer" data-aos="fade-up" data-aos-delay="1000">
+        Desenvolvimento de Software Multiplataforma · 2026
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/timeline.js" defer></script>
+  <script src="assets/js/comparison.js" defer></script>
+  <script src="assets/js/debate.js" defer></script>
+  <script src="assets/js/charts.js" defer></script>
+  <script src="assets/js/quiz.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
