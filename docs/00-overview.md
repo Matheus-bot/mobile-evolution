@@ -4,7 +4,7 @@
 
 ## 1. O que é este projeto
 
-É um **site de apresentação (one-page, scroll-driven)** feito para a disciplina de Desenvolvimento de Software Multiplataforma. Ele substitui um PowerPoint tradicional: em vez de trocar de slide clicando, os apresentadores **rolam a página** e cada seção (quase do tamanho da tela inteira) revela um bloco do conteúdo com animações.
+É um **sitema de apresentação (one-page, scroll-driven)** feito para a disciplina de Desenvolvimento de Software Multiplataforma. Ele substitui um PowerPoint tradicional: em vez de trocar de slide clicando, os apresentadores **rolam a página** e cada seção (quase do tamanho da tela inteira) revela um bloco do conteúdo com animações.
 
 O tema do conteúdo é **"A Evolução do Desenvolvimento Mobile"**: da programação nativa (Java/Kotlin/Swift) até o desenvolvimento multiplataforma (React Native, Flutter) e o papel da IA hoje.
 
@@ -120,7 +120,7 @@ Essa separação é conhecida como **separação de responsabilidades** (*separa
 
 ## 6. Por que não usamos React/Vue/Angular?
 
-O enunciado do trabalho pediu explicitamente **HTML5 + CSS3 + JavaScript puro** (chamado de *Vanilla JS*), com bibliotecas leves apenas para efeitos pontuais (animação de scroll, gráficos, ícones, realce de código). Isso tem uma vantagem didática: **dá para entender 100% do código sem aprender um framework antes** — é só abrir os arquivos e ler.
+por que o **HTML5 + CSS3 + JavaScript puro** (chamado de *Vanilla JS*), com bibliotecas leves apenas para efeitos pontuais (animação de scroll, gráficos, ícones, realce de código). Isso tem uma vantagem didática: **dá para entender 100% do código sem aprender um framework antes** — é só abrir os arquivos e ler.
 
 ## 7. Por onde continuar a leitura
 

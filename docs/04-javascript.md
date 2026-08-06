@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 ### `IntersectionObserver`
 
-Usado em `timeline.js` (indiretamente, via scroll), `comparison.js`, `debate.js` e `charts.js`. É a API nativa do navegador para responder a "este elemento entrou/saiu da área visível da tela" **sem** precisar calcular manualmente a posição de scroll a cada frame (o que seria caro em performance).
+Usado em `timeline.js` (indiretamente, via scroll), `comparison.js`, `debate.js` e `charts.js`. É a API nativa do navegador para responder a "este elemento entrou/saiu da área visível da tela" **sem** precisar calcular manualmente a posição de scroll a cada frame
 
 ```javascript
 const observer = new IntersectionObserver(

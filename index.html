@@ -656,13 +656,44 @@
 
   </main>
 
+  <!-- ============================================= -->
+  <!-- FEEDBACK / ESTATÍSTICAS (seção discreta)        -->
+  <!-- ============================================= -->
+  <section class="feedback" id="feedback" aria-label="Avaliação e estatísticas da página">
+    <p class="feedback__question">Gostou da experiência?</p>
+
+    <div class="feedback__stars" id="feedbackStars" role="radiogroup" aria-label="Avaliar de 1 a 5 estrelas">
+      <button type="button" class="feedback__star" data-value="1" role="radio" aria-checked="false" aria-label="1 estrela">★</button>
+      <button type="button" class="feedback__star" data-value="2" role="radio" aria-checked="false" aria-label="2 estrelas">★</button>
+      <button type="button" class="feedback__star" data-value="3" role="radio" aria-checked="false" aria-label="3 estrelas">★</button>
+      <button type="button" class="feedback__star" data-value="4" role="radio" aria-checked="false" aria-label="4 estrelas">★</button>
+      <button type="button" class="feedback__star" data-value="5" role="radio" aria-checked="false" aria-label="5 estrelas">★</button>
+    </div>
+
+    <button type="button" class="feedback__submit" id="feedbackSubmit" disabled>Avaliar</button>
+    <p class="feedback__thanks" id="feedbackThanks" hidden>Obrigado pela sua avaliação!</p>
+
+    <div class="feedback__stats" id="feedbackStats">
+      <span class="feedback__stat"><i data-lucide="star"></i> Média: <strong id="feedbackAvg">—</strong></span>
+      <span class="feedback__stat"><i data-lucide="message-square"></i> Avaliações: <strong id="feedbackCount">—</strong></span>
+      <span class="feedback__stat"><i data-lucide="eye"></i> Visitas: <strong id="feedbackVisits">—</strong></span>
+    </div>
+  </section>
+
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Firebase (compat SDK — expõe o objeto global `firebase`) -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
   <script src="assets/js/timeline.js" defer></script>
   <script src="assets/js/comparison.js" defer></script>
   <script src="assets/js/debate.js" defer></script>
   <script src="assets/js/charts.js" defer></script>
   <script src="assets/js/quiz.js" defer></script>
+  <script src="assets/js/firebase-config.js"></script>
+  <script src="assets/js/feedback.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
