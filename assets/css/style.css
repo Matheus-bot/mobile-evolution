@@ -717,6 +717,15 @@ img {
   transform-style: preserve-3d;
 }
 
+/* Empilha duas ou mais .code-window na mesma coluna do grid,
+   sem alterar .native-dev__grid / .rn__grid */
+.code-window-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
 .code-window__titlebar {
   display: flex;
   align-items: center;
@@ -1521,88 +1530,7 @@ img {
 }
 
 /* =================================================================
-   11. FUTURO (IA)
-   ================================================================= */
-.future {
-  gap: 0.5rem;
-}
-
-.future__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 2.5rem;
-}
-
-.future-card {
-  padding: 1.75rem 1.4rem;
-  border-radius: 18px;
-  text-align: center;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass);
-  animation: floatCard 4.5s ease-in-out infinite;
-}
-
-.future-card:nth-child(2) { animation-delay: 0.3s; }
-.future-card:nth-child(3) { animation-delay: 0.6s; }
-.future-card:nth-child(4) { animation-delay: 0.9s; }
-
-@keyframes floatCard {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-8px); }
-}
-
-.future-card__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.1rem;
-  background: var(--bg-elevated);
-  box-shadow: 0 0 26px color-mix(in srgb, var(--icon-color) 35%, transparent);
-}
-
-.future-card__icon i {
-  width: 24px;
-  height: 24px;
-  color: var(--icon-color);
-}
-
-.future-card h3 {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.future-card p {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.future__closing {
-  margin-top: 3rem;
-  font-family: var(--font-heading);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--text-secondary);
-  text-align: center;
-  max-width: 46ch;
-}
-
-@media (max-width: 900px) {
-  .future__grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 480px) {
-  .future__grid { grid-template-columns: 1fr; }
-}
-
-/* =================================================================
-   12. CONCLUSÃO
+   11. CONCLUSÃO
    ================================================================= */
 .conclusion {
   text-align: center;
@@ -1643,118 +1571,6 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
-}
-
-/* =================================================================
-   13. FEEDBACK / ESTATÍSTICAS (seção discreta no rodapé)
-   ================================================================= */
-.feedback {
-  --color-star: #ffc857;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.9rem;
-  width: 100%;
-  padding: 3rem var(--section-padding-x) 3.5rem;
-  text-align: center;
-  border-top: 1px solid var(--border-glass);
-  background: var(--bg-secondary);
-}
-
-.feedback__question {
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-secondary);
-}
-
-.feedback__stars {
-  display: flex;
-  gap: 0.35rem;
-}
-
-.feedback__star {
-  font-size: 1.6rem;
-  line-height: 1;
-  color: var(--border-glass-strong);
-  transition: var(--transition-fast);
-  transform: scale(1);
-}
-
-.feedback__star:hover,
-.feedback__star.is-hover {
-  color: var(--color-star);
-  transform: scale(1.12);
-}
-
-.feedback__star.is-selected {
-  color: var(--color-star);
-}
-
-.feedback__stars.is-disabled .feedback__star {
-  cursor: default;
-}
-
-.feedback__submit {
-  padding: 0.55rem 1.5rem;
-  border-radius: 100px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  background: var(--bg-glass);
-  border: 1px solid var(--border-glass-strong);
-  transition: var(--transition-fast);
-}
-
-.feedback__submit:not(:disabled):hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.24);
-  transform: translateY(-1px);
-}
-
-.feedback__submit:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.feedback__thanks {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-style: italic;
-}
-
-.feedback__stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-.feedback__stat {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.feedback__stat i {
-  width: 14px;
-  height: 14px;
-  color: var(--text-muted);
-}
-
-.feedback__stat strong {
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  .feedback__stats {
-    gap: 0.9rem 1.25rem;
-  }
 }
 
 /* Respeita usuários que preferem menos movimento */

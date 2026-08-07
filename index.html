@@ -134,8 +134,8 @@
             <span class="timeline__dot"></span>
             <div class="timeline__content">
               <span class="timeline__year">Hoje</span>
-              <h3>IA no desenvolvimento</h3>
-              <p>Copilot, ChatGPT e Gemini aceleram o modo como criamos software.</p>
+              <h3>Nova Arquitetura do React Native</h3>
+              <p>Fabric, TurboModules e JSI elevam a performance do multiplataforma em 2026.</p>
             </div>
           </li>
         </ul>
@@ -233,14 +233,15 @@
       </p>
 
       <div class="native-dev__grid">
-        <div class="code-window" data-aos="fade-right" data-aos-delay="100" data-tilt>
-          <div class="code-window__titlebar">
-            <span class="win-dot win-dot--a"></span>
-            <span class="win-dot win-dot--b"></span>
-            <span class="win-dot win-dot--c"></span>
-            <span class="code-window__title">MainActivity.java</span>
-          </div>
-          <pre class="code-window__pre"><code class="language-java">public class MainActivity extends AppCompatActivity {
+        <div class="code-window-stack">
+          <div class="code-window" data-aos="fade-right" data-aos-delay="100" data-tilt>
+            <div class="code-window__titlebar">
+              <span class="win-dot win-dot--a"></span>
+              <span class="win-dot win-dot--b"></span>
+              <span class="win-dot win-dot--c"></span>
+              <span class="code-window__title">MainActivity.java</span>
+            </div>
+            <pre class="code-window__pre"><code class="language-java">public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -253,6 +254,20 @@
         );
     }
 }</code></pre>
+          </div>
+
+          <div class="code-window" data-aos="fade-right" data-aos-delay="180" data-tilt>
+            <div class="code-window__titlebar">
+              <span class="win-dot win-dot--a"></span>
+              <span class="win-dot win-dot--b"></span>
+              <span class="win-dot win-dot--c"></span>
+              <span class="code-window__title">ProfileActivity.java</span>
+            </div>
+            <pre class="code-window__pre"><code class="language-java">// Activity representa uma tela.
+// Intent navega até ela ou solicita uma ação.
+Intent intent = new Intent(this, ProfileActivity.class);
+startActivity(intent);</code></pre>
+          </div>
         </div>
 
         <div class="pros-cons">
@@ -327,14 +342,15 @@
           </div>
         </div>
 
-        <div class="code-window" data-aos="fade-left" data-aos-delay="160" data-tilt>
-          <div class="code-window__titlebar">
-            <span class="win-dot win-dot--a"></span>
-            <span class="win-dot win-dot--b"></span>
-            <span class="win-dot win-dot--c"></span>
-            <span class="code-window__title">App.js</span>
-          </div>
-          <pre class="code-window__pre"><code class="language-jsx">export default function App() {
+        <div class="code-window-stack">
+          <div class="code-window" data-aos="fade-left" data-aos-delay="160" data-tilt>
+            <div class="code-window__titlebar">
+              <span class="win-dot win-dot--a"></span>
+              <span class="win-dot win-dot--b"></span>
+              <span class="win-dot win-dot--c"></span>
+              <span class="code-window__title">App.js</span>
+            </div>
+            <pre class="code-window__pre"><code class="language-jsx">export default function App() {
   const [count, setCount] = useState(0);
 
   return (
@@ -349,6 +365,23 @@
     &lt;/View&gt;
   );
 }</code></pre>
+          </div>
+
+          <div class="code-window" data-aos="fade-left" data-aos-delay="240" data-tilt>
+            <div class="code-window__titlebar">
+              <span class="win-dot win-dot--a"></span>
+              <span class="win-dot win-dot--b"></span>
+              <span class="win-dot win-dot--c"></span>
+              <span class="code-window__title">Layout.js</span>
+            </div>
+            <pre class="code-window__pre"><code class="language-jsx">function App() {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;Mobile Evolution&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}</code></pre>
+          </div>
         </div>
       </div>
     </section>
@@ -599,48 +632,7 @@
     </section>
 
     <!-- ============================================= -->
-    <!-- 11. FUTURO (IA)                                 -->
-    <!-- ============================================= -->
-    <section class="section future" id="future" data-label="Futuro">
-      <p class="section-eyebrow" data-aos="fade-up">O próximo capítulo</p>
-      <h2 class="section-heading" data-aos="fade-up" data-aos-delay="80">O Futuro é Assistido por IA</h2>
-      <p class="native-dev__lead" data-aos="fade-up" data-aos-delay="140">
-        Da geração de código à revisão automática — a IA já faz parte do fluxo de qualquer desenvolvedor.
-      </p>
-
-      <div class="future__grid">
-        <div class="future-card" data-aos="fade-up" data-aos-delay="0">
-          <div class="future-card__icon" style="--icon-color:#f5f5f7"><i data-lucide="github"></i></div>
-          <h3>GitHub Copilot</h3>
-          <p>Sugestões de código em tempo real, direto no editor.</p>
-        </div>
-
-        <div class="future-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="future-card__icon" style="--icon-color:#10a37f"><i data-lucide="sparkles"></i></div>
-          <h3>ChatGPT</h3>
-          <p>Explica, refatora e tira dúvidas em segundos.</p>
-        </div>
-
-        <div class="future-card" data-aos="fade-up" data-aos-delay="160">
-          <div class="future-card__icon" style="--icon-color:#a855f7"><i data-lucide="gem"></i></div>
-          <h3>Gemini</h3>
-          <p>IA multimodal do Google, integrada ao ecossistema Android.</p>
-        </div>
-
-        <div class="future-card" data-aos="fade-up" data-aos-delay="240">
-          <div class="future-card__icon" style="--icon-color:#5b8cff"><i data-lucide="mouse-pointer-click"></i></div>
-          <h3>Cursor</h3>
-          <p>Editor construído do zero para programar com IA.</p>
-        </div>
-      </div>
-
-      <p class="future__closing" data-aos="fade-up" data-aos-delay="120">
-        A IA não substitui o desenvolvedor — acelera quem já sabe pensar.
-      </p>
-    </section>
-
-    <!-- ============================================= -->
-    <!-- 12. CONCLUSÃO                                   -->
+    <!-- 11. CONCLUSÃO                                   -->
     <!-- ============================================= -->
     <section class="section conclusion" id="conclusion" data-label="Conclusão">
       <div class="conclusion__stack">
@@ -656,44 +648,14 @@
 
   </main>
 
-  <!-- ============================================= -->
-  <!-- FEEDBACK / ESTATÍSTICAS (seção discreta)        -->
-  <!-- ============================================= -->
-  <section class="feedback" id="feedback" aria-label="Avaliação e estatísticas da página">
-    <p class="feedback__question">Gostou da experiência?</p>
-
-    <div class="feedback__stars" id="feedbackStars" role="radiogroup" aria-label="Avaliar de 1 a 5 estrelas">
-      <button type="button" class="feedback__star" data-value="1" role="radio" aria-checked="false" aria-label="1 estrela">★</button>
-      <button type="button" class="feedback__star" data-value="2" role="radio" aria-checked="false" aria-label="2 estrelas">★</button>
-      <button type="button" class="feedback__star" data-value="3" role="radio" aria-checked="false" aria-label="3 estrelas">★</button>
-      <button type="button" class="feedback__star" data-value="4" role="radio" aria-checked="false" aria-label="4 estrelas">★</button>
-      <button type="button" class="feedback__star" data-value="5" role="radio" aria-checked="false" aria-label="5 estrelas">★</button>
-    </div>
-
-    <button type="button" class="feedback__submit" id="feedbackSubmit" disabled>Avaliar</button>
-    <p class="feedback__thanks" id="feedbackThanks" hidden>Obrigado pela sua avaliação!</p>
-
-    <div class="feedback__stats" id="feedbackStats">
-      <span class="feedback__stat"><i data-lucide="star"></i> Média: <strong id="feedbackAvg">—</strong></span>
-      <span class="feedback__stat"><i data-lucide="message-square"></i> Avaliações: <strong id="feedbackCount">—</strong></span>
-      <span class="feedback__stat"><i data-lucide="eye"></i> Visitas: <strong id="feedbackVisits">—</strong></span>
-    </div>
-  </section>
-
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-  <!-- Firebase (compat SDK — expõe o objeto global `firebase`) -->
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 
   <script src="assets/js/timeline.js" defer></script>
   <script src="assets/js/comparison.js" defer></script>
   <script src="assets/js/debate.js" defer></script>
   <script src="assets/js/charts.js" defer></script>
   <script src="assets/js/quiz.js" defer></script>
-  <script src="assets/js/firebase-config.js"></script>
-  <script src="assets/js/feedback.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
