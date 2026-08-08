@@ -29,7 +29,6 @@ Ao longo da apresentação serão abordados:
 * Comparação entre as tecnologias
 * Sistemas Operacionais Mobile
 * Panorama do mercado
-* Inteligência Artificial aplicada ao desenvolvimento
 
 ---
 
@@ -89,7 +88,8 @@ A evolução das principais tecnologias utilizadas no desenvolvimento de aplicat
 * Android Studio
 * Kotlin
 * React Native
-* Inteligência Artificial
+* Flutter
+  
 
 ### Android Studio
 
@@ -131,11 +131,6 @@ Apresentação dos principais sistemas operacionais:
 * Ubuntu Touch
 * Sailfish OS
 * Tizen
-
-### Inteligência Artificial
-
-Breve demonstração de como ferramentas baseadas em IA estão transformando o desenvolvimento de software.
-
 ---
 
 ## Recursos da Apresentação
@@ -147,7 +142,6 @@ Breve demonstração de como ferramentas baseadas em IA estão transformando o d
 * Trechos de Código
 * Gráficos
 * Podcast em Vídeo
-* QR Code para acesso pelo celular
 * Design inspirado em conferências de tecnologia
 
 ---
@@ -169,20 +163,24 @@ cd mobile-evolution
 Abra o arquivo `index.html` diretamente no navegador ou utilize a extensão **Live Server** do Visual Studio Code.
 
 ---
+## link do vercel:
+https://mobile-evolution.vercel.app/
+
 
 ## Roadmap
 
 * [x] Planejamento do projeto
 * [x] Estrutura inicial
-* [ ] Landing Page
-* [ ] Linha do Tempo Interativa
-* [ ] Comparativo entre tecnologias
-* [ ] Dashboard do mercado mobile
-* [ ] Integração do vídeo
-* [ ] Sistema de Quiz
-* [ ] Responsividade
-* [ ] Publicação no GitHub Pages
+* [x] Landing Page
+* [x] Linha do Tempo Interativa
+* [x] Comparativo entre tecnologias
+* [x] Dashboard do mercado mobile
+* [x] Integração do vídeo
+* [x] Sistema de Quiz
+* [x] Responsividade
 
+## Futuramente:
+* pretendo continuar e alimentar o projeto com o conteúdo das futuras aulas de Programação para dispositivos móveis
 ---
 
 ## Referências
@@ -197,7 +195,7 @@ Abra o arquivo `index.html` diretamente no navegador ou utilize a extensão **Li
 
 ## Licença
 
-Este projeto possui finalidade **acadêmica e educacional**, sendo desenvolvido exclusivamente para fins de estudo e apresentação na disciplina de Programação para Dispositivos Móveis.
+Este projeto possui finalidade **acadêmica e educacional**, sendo desenvolvido exclusivamente para fins de estudo e apresentação na disciplina de Programação para Dispositivos Móveis com react native.
 
 ---
 
