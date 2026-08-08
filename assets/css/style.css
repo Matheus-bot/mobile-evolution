@@ -46,6 +46,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -709,6 +710,7 @@ img {
    ================================================================= */
 .code-window {
   width: 100%;
+  min-width: 0;
   border-radius: 14px;
   overflow: hidden;
   background: var(--bg-elevated);
@@ -724,6 +726,7 @@ img {
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
+  min-width: 0;
 }
 
 .code-window__titlebar {
@@ -836,6 +839,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 0;
 }
 
 .pros-cons__col h3 {
@@ -909,6 +913,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 /* --- Diagrama de arquitetura simplificada (JS ↔ Bridge ↔ Nativo) --- */
@@ -993,6 +998,21 @@ img {
 
   .feature-row {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .rn-architecture {
+    padding: 1.25rem 0.5rem;
+  }
+
+  .rn-arch__node {
+    min-width: 58px;
+  }
+
+  .rn-arch__connector {
+    min-width: 10px;
+    margin: 0 0.15rem;
   }
 }
 
@@ -1391,6 +1411,7 @@ img {
 }
 
 .chart-card {
+  min-width: 0;
   padding: 1.75rem;
   border-radius: 20px;
   background: var(--bg-glass);
@@ -1410,6 +1431,10 @@ img {
 .chart-card__canvas-wrap {
   position: relative;
   height: 260px;
+}
+
+.chart-card__canvas-wrap canvas {
+  max-width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -1564,13 +1589,23 @@ img {
 .conclusion__footer {
   position: absolute;
   bottom: 2.25rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  width: fit-content;
+  margin-inline: auto;
   font-size: 0.7rem;
   color: var(--text-muted);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .conclusion__footer {
+    width: calc(100% - 2 * var(--section-padding-x));
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 /* Respeita usuários que preferem menos movimento */
